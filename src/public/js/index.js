@@ -1,17 +1,15 @@
 const socket = io();
-
 const table = document.getElementById('table');
 
 function createChild(product) {
   const html = `
-                <td>${product.title}</td>
-                <td>${product.description}</td>
-                <td>$${product.price}</td>
-                <td>${product.category}</td>
-                <td>${product.stock} unidades</td>
-              `
+    <td>${product.title}</td>
+    <td>${product.description}</td>
+    <td>$${product.price}</td>
+    <td>${product.category}</td>
+    <td>${product.stock} unidades</td>
+  `
 
-  // Actualizar el HTML de la página
   const newElement = document.createElement('tr');
   newElement.id = product.id;
 

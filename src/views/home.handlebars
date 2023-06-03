@@ -1,14 +1,26 @@
-<div>
-    <h1>Productos:</h1>
-    {{#each products}}
-        <div class="product">
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
-            <p>Precio: {{price}}</p>
-            <p>Categoria: {{category}}</p>
-            <img src="{{thumbnail}}" alt="Imagen del producto"></img>
-            <p>Stock: {{stock}}</p>
-        </div>
-    {{/each}}
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Unidades Disponibles</th>
+            <th>Imagen</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each products}}
+            <tr>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>${{price}}</td>
+            <td>{{category}}</td>
+            <td>{{stock}} unidades</td>
+            <th><img scr="{{thumbnails}}" alt="Imagen del producto"></img></th>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
 </div>
-
